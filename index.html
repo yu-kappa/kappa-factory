@@ -1,90 +1,287 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>かっぱ手芸店</title>
+  <link href="reset.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+  <!-- ↓[slick-slider]用読み込み -->
+	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="./assets/js/main.js"></script> -->
+  
+  <!-- [swiper]用読み込み -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
+  <header class="header_pc">
+    <div class="header_inner">
+      <div class="header_logo">
+        <h1><a href="/"><img src="img/header.png" alt="かっぱ手芸店"></a></h1>
       </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
+
+      <div class="header_desc">
+        <p>キャッチフレーズ</p>
       </div>
+
+      <form class="header_search">
+        <input type="text" placeholder="キーワードを入力">
+        <i class="fas fa-search"></i>
+      </form>
     </div>
+
+    <div class="header_links">
+      <nav class="gnav_pc">
+        <ul class="">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">わたしたちについて</a></li>
+          <li><a href="#">アクセス</a></li>
+          <li><a href="#">最新情報</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <ul class="header_sns">
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+      </ul>
+    </div>
+
+    <!-- <svg class="header_menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+			width="30" height="30" viewBox="0 0 30 30">
+			<defs>
+				<clipPath id="clip-path">
+					<rect width="30" height="30" fill="none" />
+				</clipPath>
+			</defs>
+			<g clip-path="url(#clip-path)">
+				<rect class="header_border header_border-1" width="30" height="2" transform="translate(0 0)" />
+				<rect class="header_border header_border-2" width="30" height="2" transform="translate(0 10)" />
+				<rect class="header_border header_border-3" width="30" height="2" transform="translate(0 20)" />
+			</g>
+		</svg> -->
   </header>
-  <div class="top-wrapper">
+
+  <!-- <div class="jumbotron">
+		<div class="jumbotron_item" style="background-image: url('./img/header001.JPG')"></div>
+		<div class="jumbotron_item" style="background-image: url('./img/header002.JPG')"></div>
+		<div class="jumbotron_item" style="background-image: url('./img/header003.JPG')"></div>
+  </div> -->
+
+  <div id="slider"> <!-- class="container" -->
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/header001.JPG" alt=""></div>
+            <div class="swiper-slide"><img src="./img/header002.JPG" alt=""></div>
+            <div class="swiper-slide"><a href="#"><img src="./img/header003.JPG" alt=""></a></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <div class="swiper-pagination swiper-pagination-bullets">
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+        </div>
+    </div>
+
+  </div><!-- /slider -->
+
+  <section class="sec">
     <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
+      <header class="sec_header">
+        <h2 class="title">最新情報<span>NEWS</span></h2>
+      </header>
+
+      <div class="posts">
+        <div class="post">
+          <article class="news">
+            <div class="news_pic">
+              <a href="#">
+                <img src="./img/header001.JPG" alt="">
+              </a>
+            </div>
+            <div class="news_meta">
+              <ul class="post-categories">
+                <li><a href="#">お知らせ</a></li>
+              </ul>
+              <time class="news_time" datetime="2020-00-00">2020年00月00日</time>
+            </div>
+            <h2 class="news_title"><a href="#">タイトルタイトルタイトルタイトル</a></h2>
+            <div class="news_desc">
+              <p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
+              <p><a href="#">[続きを読む]</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="post">
+          <article class="news">
+            <div class="news_pic">
+              <a href="#">
+                <img src="./img/header002.JPG" alt="">
+              </a>
+            </div>
+            <div class="news_meta">
+              <ul class="post-categories">
+                <li><a href="#">お知らせ</a></li>
+              </ul>
+              <time class="news_time" datetime="2020-00-00">2020年00月00日</time>
+            </div>
+            <h2 class="news_title"><a href="#">タイトルタイトルタイトルタイトル</a></h2>
+            <div class="news_desc">
+              <p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
+              <p><a href="#">[続きを読む]</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="post">
+          <article class="news">
+            <div class="news_pic">
+              <a href="#">
+                <img src="./img/header003.JPG" alt="">
+              </a>
+            </div>
+            <div class="news_meta">
+              <ul class="post-categories">
+                <li><a href="#">お知らせ</a></li>
+              </ul>
+              <time class="news_time" datetime="2020-00-00">2020年00月00日</time>
+            </div>
+            <h2 class="news_title"><a href="#">タイトルタイトルタイトルタイトル</a></h2>
+            <div class="news_desc">
+              <p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
+              <p><a href="#">[続きを読む]</a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <p class="sec_btn">
+        <a href class="btn btn-default">最新情報の一覧<i class="fas fa-angle-right"></i></a>
+      </p>
+    </div>
+  </section>
+
+  <section class="sec bg-gray">
+    <div class="container">
+      <header class="sec_header">
+        <h2 class="title">店舗情報<span>INFORMATION</span></h2>
+      </header>
+
+      <div class="posts">
+        <div class="half_box">
+          <a href="#" class="bnr" style="background-image:url('./img/header001.JPG')">
+            <div class="bnr_inner">
+              わたしたちについて<span>ABOUT</span>
+            </div>
+          </a>
+        </div>
+        
+        <div class="half_box">
+          <a href="#" class="bnr" style="background-image:url('./img/header001.JPG')">
+            <div class="bnr_inner">
+              アクセス<span>ACCESS</span>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
+  </section>
+
+  <section class="sec sec-bg">
+    <div class="sec_inner">
+      <header class="sec_header">
+        <h2 class="title">お問い合わせ<span>CONTACT</span></h2>
+      </header>
+
+      <div class="sec_body contact">
+        <div class="contact_icon">
+          <i class="fas fa-phone"></i>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
+        <div class="contact_body">
+          <p>
+              お気軽にお問い合わせください
+                <span>03-1234-5678</span>
+          </p>
         </div>
       </div>
-      <div class="clear"></div>
+
+      <div class="sec_btn">
+        <a href="" class="btn btn-default">メールフォーム<i class="fas fa-angle-right"></i></a>
+      </div>
     </div>
-  </div>
-  <div class="message-wrapper">
+  </section>
+
+  <div class="pagetop js-pagetop"><i class="fas fa-angle-up"></i>PAGE TOP</div>
+
+  <footer class="footer">
     <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
+      <div class="footer_inner">
+        <nav>
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">わたしたちについて</a></li>
+            <li><a href="#">アクセス</a></li>
+            <li><a href="#">最新情報</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <div class="footer_copyright">
+          <small>&copy;かっぱ手芸店 All rights reserved.</small>
+        </div>
       </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
     </div>
   </footer>
+
+  <!-- [slick-slide]用 -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./assets/js/home.js"></script> -->
+  
+  <!-- ↓[swiper]用JavaScript -->
+  <script type="text/javascript">
+    let mySwiper = new Swiper ('.swiper-container', {
+      // 以下にオプションを設定
+      loop: true, //最後に達したら先頭に戻る
+      centeredSlides:true,
+      autoplay: {
+        delay: 3000,
+      },
+      
+      slidesPerView:1,
+      breakpoints: {
+        //   768px以上の場合
+        768: {
+            slidesPerView:2, 
+        }
+      },
+    
+      //ページネーション表示の設定
+      pagination: { 
+        el: '.swiper-pagination', //ページネーションの要素
+        type: 'bullets', //ページネーションの種類
+        clickable: true, //クリックに反応させる
+      },
+    
+      //ナビゲーションボタン（矢印）表示の設定
+      navigation: { 
+        nextEl: '.swiper-button-next', //「次へボタン」要素の指定
+        prevEl: '.swiper-button-prev', //「前へボタン」要素の指定
+      },
+    
+      //スクロールバー表示の設定
+      scrollbar: { 
+        el: '.swiper-scrollbar', //要素の指定
+      },
+    })
+  </script>
+  
 </body>
 </html>
